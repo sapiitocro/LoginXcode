@@ -59,10 +59,17 @@ class ViewController: UIViewController {
                         self.defaultValues.set(userEmail, forKey: "useremail")
                         self.defaultValues.set(userPhone, forKey: "userphone")
                         
+                        let defaults = UserDefaults.standard
+                        defaults.set(userId,     forKey: "userid")
+                        defaults.set(userName,      forKey: "username")
+                        defaults.set(userEmail,         forKey: "useremail")
+                        defaults.set(userPhone,       forKey: "userphone")
+                        defaults.synchronize()
+                        
+                        
                         //switching the screen
                         let listaViewController = self.storyboard?.instantiateViewController(withIdentifier: "ListaViewController") as! ListaViewController
                         self.navigationController?.pushViewController(listaViewController, animated: true)
-                        
                         self.dismiss(animated: false, completion: nil)
                     }else{
                         //error message in case of invalid credential
@@ -105,6 +112,7 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+   
 
 }
 

@@ -6,7 +6,9 @@ target 'CounterApp' do
   use_frameworks!
 
   # Pods for CounterApp
-  pod 'Alamofire', '~> 4.3'
+  pod 'Alamofire', '~> 4.4'
+  pod 'GoogleMaps'
+  pod 'GooglePlaces'
   target 'CounterAppTests' do
     inherit! :search_paths
     # Pods for testing
@@ -16,5 +18,7 @@ target 'CounterApp' do
     inherit! :search_paths
     # Pods for testing
   end
+  
+  
 
 end
